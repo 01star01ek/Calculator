@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block headcontent %}
+
+<head>
+    <meta charset="utf-8">
+    <title>정보수정</title>
+    <link rel="stylesheet" href="{% static 'css/modify.css' %}" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        @import url("{% static 'css/footer.css' %}");
+    </style>
+</head>
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
+    @import url("{% static 'css/header.css' %}");
+</style>
+
+<!-- header -->
+<header class="header">
+    <div class="header_wrapper">
+        <div class="header_logo">
+            <a href="{% url 'home' %}">
+                <!--로고 누르면 어디로 가?-->
+                <img src="{% static 'img/cal.png'%}" id="headr_img" />
+                <h1 class="header_title">학점계산기</h1>
+            </a>
+        </div>
+        <div class="header_inform">
+            {% for pro in user.profile_set.all %}
+            <label>{{ pro.name }} | </label>
+            <label>{{ pro.major }} | </label>
+            <label>{{ pro.ad_year }} </label>
+            {% endfor %}
+        </div>
+        <!--여기 어떻게 할지 생각하기-->
+        <nav class="header_fix">
+            <ul>
+                <li><a href="{% url 'logout' %}">로그아웃</a></li>
+                <li style="color : #a8aabc">|</li>
+                <li><a href="{% url 'modify' %}">정보수정</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="wrapper">
+    <div id="content">
+        <div class="mod_size">
+            <label id="mod_tit">정보수정</label>
+        </div>
+
+        <form class="modify_inputs" action="{% url 'modify_userinfo' %}" method="POST">
+            {% csrf_token %}
+            {% for pro in user.profile_set.all %}
+            <div class="modify_input">
+                <input type="text" name="name" placeholder="{{ pro.name }}" class="modify_in" /><br>
+                <input type="text" name="major" placeholder="{{ pro.major }}" class="modify_in" /><br>
+                <input type="text" name="admisson_year" placeholder="{{ pro.ad_year }}" class="modify_in" />
+            </div>
+            {% endfor %}
+            <button type="submit" class="button_click">변경하기</button>
+        </form>
+
+
+        <form class="modify_inputs" action="{% url 'modify_password' %}" method="POST">
+            {% csrf_token %}
+            <div class="modify_input">
+                <input type="password" name="curr_password" placeholder="현재 비밀번호" class="modify_in" /><br>
+                <input type="password" name="new_password" placeholder="새 비밀번호(문자, 숫자 포함 8~20자)"
+                    class="modify_in" /><br>
+                <input type="password" name="repeat_password" placeholder="비밀번호 재입력" class="modify_in" /><br>
+            </div>
+            <div>
+                <p id="message" style="    display: inline-block;
+                padding: 0.7em 0.2em 0 0.1em;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                color : red;
+                font-family: 'GmarketSansMedium';
+            ">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message.message }}
+                    {% endfor %}
+                    {% endif %}
+                </p>
+
+            </div>
+            <button type="submit" class="button_click">변경하기</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <hr id="footer_hr">
+    <div class="footer_text">
+        <ul class="footer_list">
+            <li><a href="javascript:popout()">이용 방법</a></li>
+            <li>|</li>
+            <li><a href="javascript:click()">문의 및 건의</li>
+        </ul>
+        <p class="copy">© 2022 멋사강원대</p>
+    </div>
+</footer>
+
+<script>
+
+    function click() { alert('문의 및 건의는 calculator1234@gmail.com으로 연락주세요'); }
+
+    function popout() {
+        var url = "{% url 'method' %}";
+        var name = "method"
+        var css = "width = 500, height = 600, top = 10, left = 10"
+        window.open(url, name, css)
+    }
+</script>
+{% endblock %}

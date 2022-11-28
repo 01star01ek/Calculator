@@ -1,0 +1,53 @@
+/**전체 설정**/
+@import "reset.css";
+/**전체 설정 완료**/
+
+/**전체설정**/
+.footer {
+    width : 100%;
+    bottom : 0;
+    padding: 3em 15%;
+}
+
+/**밑줄**/
+#footer_hr {
+    width: 100%;
+    background-color: #A8aabc;
+    height: 0.08em;/**죄송합니다 (수정함)**/
+    border: 0;
+}
+
+/**글 전체 속성 정리**/
+.footer_text {
+    font-family: 'GmarketSansMedium';
+    margin-top: 0.7em;/**죄송합니다 (수정함)**/
+}
+
+/**선택지**/
+.footer li {
+    color : #A8aabc;
+    text-align: left;
+    display: inline;
+    padding: 0 3px 0 3px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+  .footer a:hover { 
+    text-decoration: underline;
+    text-underline-position:under;
+  }
+
+/**저작권**/
+.copy {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+@media screen and (max-width : 1023px) {
+    .footer {
+        padding: 3em 8%;
+    }
+}

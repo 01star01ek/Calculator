@@ -1,0 +1,54 @@
+/**전체 설정**/
+@import "reset.css";
+/**완료 _ 전체 설정**/
+
+
+.wrapper {
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    overflow:auto;
+    padding: 5%;
+}
+
+.min_tit {
+    color : #747687;
+    font-style: italic;
+    margin: 2em;
+}
+
+
+#tit {
+    font-size: 2.5rem;
+    margin: 0.4em 10%;
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: #1E51A2;
+    color: white;
+}
+
+.int {
+    margin: 0.8em;
+    line-height: 1.3em;
+}
+
+.sub_tit {
+    font-size: 2rem;
+    padding-top: 1em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+}
+
+.sub_tit::after {
+    content: '';
+    background-color: #1E51A2;
+    display: block;
+    height: 0.15em;
+    width: 120px;
+    margin: 8px auto;
+    
+}
+
+.ima{
+    margin-bottom: 50px;
+    box-shadow: 3px 3px 3px 3px gray;
+}

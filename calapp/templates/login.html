@@ -1,0 +1,109 @@
+{% load static %}
+<!--이미지 출처 남기기-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초기화면 페이지</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    <!--본문-->
+    <section class="main">
+        <div class="main_wrapper">
+            <h1 class="write_1"> 똑똑한 졸업 도우미,<br>당신의 졸업을 응원합니다</h1>
+            <h3 class=write_3>졸업요건<br>계산기</h3>
+
+            <form class="log" method="POST">
+                {% csrf_token %}
+                <input type='text' placeholder="ID" name="username" /><br>
+                <input type='password' placeholder="Password" name="password" /><br>
+                <p id="message" style="    display: inline-block;
+                padding: 0.7em 0.2em 0 0.1em;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                color : red;
+                font-family: 'GmarketSansMedium';
+            ">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message.message }}
+                    {% endfor %}
+                    {% endif %}
+                </p><br>
+                
+
+                <button type="submit" id="button_log">로그인</button>
+                <!--수정함 아이디 빠져 있었음-->
+            </form>
+
+            <!--어디에 아이디나 비밀번호 틀렸다고 뜨는거야?-->
+            <nav class="nomember_input">
+                <ul>
+                    <li><a href="{% url 'signup' %}">회원가입 (비회원 이용 불가)</a></li>
+                    <!--문구 수정함-->
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="introduce">
+        <div class="introduce_wrapper">
+            <h2 class="int_qus">졸업 가능 여부<br>궁금하세요?</h2>
+            <hr class="line">
+            <h4 class="int_ans"> 입력하고 클릭하면 끝,<br>졸업 가능 여부를<br>빠르게 계산해드려요</h4>
+            <h2 class="int_qus2">어떤 수업을 들을지<br>모르겠나요?</h2>
+            <hr class="line">
+            <h4 class="int_ans2">부족한 과목명과 학점이<br>얼마인지 상세히<br>확인해 알려드려요</h4>
+        </div>
+    </section>
+
+ <section>
+        <div class="photo_wrapper" style="    width : 100%;
+        height : 200px;
+        margin-bottom: 320px;
+        text-align: center;">
+            <img src="{% static 'img/phone.png' %}" id="phone" style="width : 245px;
+            height: 380px;
+            margin-top: 3em;">
+            <p id="smart" style="    margin-top : 0.6em;
+            margin-bottom: 1em;
+            font-family: 'GmarketSansMedium';
+            font-weight: bolder;
+            font-size: 2rem;
+            line-height: 1.2em;
+            flex: auto;">언제든, 어디서든<br>편리하게 이용하세요</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <hr id="footer_hr">
+        <div class="footer_text">
+            <ul class="footer_list">
+                <li><a href="javascript:popout()">이용 방법</a></li>
+                <li>|</li>
+                <li><a href="javascript:click()">문의 및 건의</li>
+            </ul>
+            <p class="copy">© 2022 멋사강원대</p>
+        </div>
+    </footer>
+
+    <script>
+
+        function click() { alert('문의 및 건의는 calculator1234@gmail.com으로 연락주세요'); }
+
+        function popout() {
+            var url = "{% url 'method' %}";
+            var name = "method"
+            var css = "width = 500, height = 600, top = 10, left = 10"
+            window.open(url, name, css)
+        }
+    </script>
+</body>
+
+</html>

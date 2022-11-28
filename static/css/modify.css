@@ -1,0 +1,60 @@
+/**전체 설정**/
+@import "reset.css";
+/**완료 _ 전체 설정**/
+
+
+.content {
+    margin: 7em auto;
+    text-align: center;
+}
+
+
+#mod_tit {
+    font-family: 'GmarketSansMedium';
+    font-weight: bolder;
+    font-size: 3rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+
+.mod_size::after {
+    content: '';
+    background-color: #1E51A2;
+    display: block;
+    height: 0.3em;
+    width: 155px;
+    margin: 8px auto;
+    
+}
+
+.modify_inputs {
+    margin-top : 3em;
+}
+
+
+
+::placeholder {
+    font-family: 'GmarketSansMedium';
+}
+
+.button_click {
+    margin-top: 1em;
+    font-family: 'GmarketSansMedium';
+    background-color : #1E51A2;
+    color: white;
+    border: 0;
+    border-radius: 3.2%;
+    width: 130px;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+.modify_in {
+    border-radius : 1em;
+    border: 0.1rem solid #A8AABc;
+    width: 100%;
+    max-width: 17em;
+    height: 3.5em;
+    margin-top: 0.4em;
+    padding: 1em;
+}

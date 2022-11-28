@@ -1,0 +1,99 @@
+/**전체 설정**/
+@import "reset.css";
+/**완료 _ 전체 설정**/
+
+#content{
+    font-family: 'GmarketSansMedium';
+    text-align: center;
+    width: 50%;
+    margin: 3em auto;
+}
+
+
+
+/**result**/
+.result_tit{
+    font-family: 'GmarketSansMedium';
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+
+}
+
+
+#result_point {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #D65E6F;
+}
+
+
+.result_tabel{
+    margin-top: 2em;
+    width: 100%;
+    border: 0.1em solid #A8AABc;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    border: 0.1em solid #A8AABc;
+    height: 40px;
+    padding-top: 13px;
+}
+
+td{
+    border: 0.1em solid #A8AABc;
+    height: 40px;
+    padding-top: 13px; 
+}
+
+
+#result_point2{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1E51A2;
+}
+
+.remain{
+    color: #1E51A2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.result_text {
+    border: 0.1em solid #A8AABc;
+    width : 100%;
+    height: 300px;
+    margin-top: 2em;
+    overflow : scroll;
+    overflow-x:hidden;
+    padding: 2em;
+    text-align: left;
+}
+
+
+#result_hr {
+    border: 0;
+    height: 0;
+    border-top: 1.2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.4em;
+}
+
+ #result_tit {
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5rem;
+    color : #747687;
+}
+
+
+
+@media screen and (max-width : 1023px) {
+    #content {
+        width: 85%;
+    }
+}
+
+

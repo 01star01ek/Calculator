@@ -1,0 +1,97 @@
+/**전체 설정**/
+@import "reset.css";
+/**전체 설정 완료**/
+
+/**전체 설정**/
+.header {
+    position : fixed;
+    top : 0;
+    left: 0;
+    width : 100%;
+    background-color : #fff;
+    box-shadow: 0 0 3px #747687; /**죄송 바꿈**/
+    z-index: 100;
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 53px;/**죄송 바꿈**/
+    padding: 0 20px;
+    margin: 0 2em;
+}
+
+
+
+/**로고**/
+.header_title {
+    font-size: 1.6rem;
+    margin-left:0.1em ;
+    font-weight: bolder;
+    font-family: 'GmarketSansMedium';
+    float: left;
+    margin-top: 0.29em;
+}
+
+
+#headr_img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    float: left;
+} 
+
+
+/**label**/
+.header label {
+    font-family: 'GmarketSansMedium';
+    font-size: 1rem;
+}
+
+
+
+/**로그아웃,정보수정**/
+.header_fix {
+    font-family: 'GmarketSansMedium';
+}
+
+.header li {
+    display: inline;
+    padding: 0 3px 0 3px;
+    white-space: nowrap;
+    float : right;
+    margin-top: 3px;
+    font-size: 1rem;
+    color : #747687
+}
+
+  .header li:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10%;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    background: #1E51A2;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .header li:hover:after { 
+    width: 3.7rem; 
+  }
+
+
+@media screen and (max-width : 1023px) {
+    .header_title {
+        display: none;
+    }
+
+    .header_wrapper {
+        margin: 0 0;
+    }
+
+    .header label {
+        display: none;
+    }
+}

@@ -1,0 +1,357 @@
+/**전체 설정**/
+@import "reset.css";
+/**완료 _ 전체 설정**/
+
+/**전체 설정**/
+.main_wrapper {
+    padding-top: 5.5em;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+
+/**입력창 테두리**/
+.add_border {
+    border: 0.1em solid #A8AABc;
+    padding-top: 0.5em;
+    padding-bottom: 0.7em; 
+}
+
+/**입력창 관련 전체 설정**/
+form {
+    display: inline-block;
+    width: 100%;
+}
+
+
+[id ^= "adds"] {
+    height :2.7em;
+}
+
+/**select 박스 placeholder 안보이게 만들기**/
+select option[disabled] {
+	display: none;
+}
+
+/*select박스 크기 설정**/
+select {
+    width: 13%;
+    min-width : 6em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/**과목 입력 창**/
+#add_title {
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5rem;
+    text-align :left;
+    color : #747687;
+}
+
+/**과목명,학점 전체설정**/
+input[type="text"], input[type="number"] {
+    border: 0.01em solid #A8AABc;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/**과목명 관련 설정**/
+input[type="text"] {
+    width: 22%;
+    min-width: 8em;
+}
+
+/**학점 x,y크롤링 없애주는 코드(Chrome, Safari, Edge, Operas) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/**학점 x,y크롤링 없애주는 코드(Fire fox) */
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 10%;
+  min-width: 2.5em;
+}
+
+/**추가 버튼 설정**/
+.adds_button {
+    background-color: #1E51A2;
+    color : white;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 0;
+    width :7%;
+    min-width: 4em;
+    font-weight: bold;
+    height: 2.7em;
+    
+}
+
+/* .adds_button:hover {
+    background-color: #113a7d;
+    cursor: pointer;
+} */
+
+/** 창 공통 설정**/
+.end {
+    width: 100%;
+    margin: 0.8em 0;
+}
+
+/**입력된 내용 창 설정**/
+.put {
+    border: 0.1em solid #A8AABc;
+    width: 69.4%;
+    height: 30em;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+
+/**초기화 버튼**/
+#put_reset {
+    float: right;
+    color : #747687;
+    font-family: 'GmarketSansMedium';
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/**입력창 상세 설명**/
+.put_plus {
+    color : #747687;
+    font-size: 1rem;
+    font-family: 'GmarketSansMedium';
+    text-align: left;
+}
+
+
+/**추가되는 내용과 수정/삭제 버튼 공통 설정**/
+.put_inform {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.4em 3em;
+    color : #4e4e4e;
+}
+
+
+
+/**수정 버튼**/
+.put_butfix {
+    background-color: white;
+    border: 0.1em solid #747687;
+    border-radius: 10%;
+    color : #747687;
+    margin-right: -2px;
+}
+
+
+/* .put_butfix:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+} */
+
+
+/**삭제 버튼**/
+/**삭제 버튼**/
+.put_butdel {
+    background-color: white;
+    border: 0;
+    border-radius: 10%;
+    color : #747687;
+    margin-left: -2px;
+    width :92%;
+    height : 100%;
+    font-weight: bold;
+}
+
+/* .put_butdel:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+} */
+
+
+/**내 이수학점 창 설정**/
+.result {
+    border: 0.1em solid #A8AABc;
+    width: 30%;
+    height: 30em;
+    padding: 2em;
+    float: right;
+    margin-bottom: 3em;
+    overflow-y : auto;
+
+}
+
+/**hr 디자인 (통일함)**/
+#put_hr {
+border: 0;
+height: 0;
+border-top: 1.2px solid rgba(0, 0, 0, 0.1);
+}
+
+#result_hr {
+    border: 0;
+    height: 0;
+    border-top: 1.2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.4em;
+}
+
+/**과목과 졸업 여부 제목 (통일함)**/
+#put_tit, #result_tit {
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+
+/**이수 학점 세부 타이틀**/
+.result_score {
+    margin-top: 1.8em;
+    margin-bottom: 3em;
+}
+
+/**이수 학점 세부 제목**/
+.score_tit {
+    text-align: left;
+    font-family: 'GmarketSansMedium';
+    font-size: 1.25rem;
+    color : #747687;
+}
+
+/**이수 학점 설명 전체 설정**/
+.score_inf {
+    text-align: right;
+    font-family: 'GmarketSansMedium';
+    color : #1E51A2;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/**이수 학점 현재 점수**/
+#score_now {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color : black;
+    font-style: normal;
+}
+
+
+
+
+/**결과 계산 버튼 설정**/
+.result_button {
+    background-color: #1E51A2;
+    color : white;
+    font-family: 'GmarketSansMedium';
+    border: 0;
+    width : 7.5em;
+    min-width: 4em;
+    height: 2.4em;
+    font-size: 1.01rem;
+    position: sticky;
+    top : 90%;
+    position: -webkit-sticky;
+}
+
+/* .result_button:hover {
+    cursor: pointer;
+    background-color: #113a7d;
+} */
+
+
+/**미디어 쿼리**/
+@media screen and (max-width : 1023px) {
+    .main_wrapper {
+        width : 85%;
+    }
+    
+    
+    form,.put,.result {
+        width: 100%;
+    }
+
+
+    .result {
+        height: 21em;
+        margin-top: 0.5em;
+    }
+    
+    .put {
+        padding : 1em;
+    }
+
+    .put_butfix{
+        margin-right: 0;
+    }
+
+    .put_butdel {
+        margin-left : 0;
+    }
+    
+    #result_hr {
+        border: 0;
+        height: 0;
+        border-top: 1.2px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 1em;
+    }
+
+    .result_score {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .result_button {
+        top : 92%;
+    }
+
+    .put_plus {
+        font-size: 0.9rem;
+    }
+
+    .put_inform{
+        margin: 0.4em 0;
+    }
+    .put_tabel {
+        width : 98%;
+    }
+}
+
+.put_inform{
+    width: 100%;
+    overflow-y : auto;
+    margin-top: -1.5em;
+    max-height: 320px;
+}
+
+
+.put_tabel {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    width : 90%;
+    font-weight: normal;
+    border: 0.05em solid #A8AABc;
+    border-collapse:collapse
+}
+
+th {
+    border: 0.1em solid #c8c9d5;
+    font-weight: bold;
+    color: #747687;
+    background-color: #ededef;
+    padding: 0.5em 0.5em;
+}
+
+td {
+    border: 0.1em solid #c8c9d5;
+    font-weight: 200;
+    padding: 0.4em 0.4em;
+}
+

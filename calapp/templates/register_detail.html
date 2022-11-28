@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block headcontent %}
+<head>
+    <meta charset="utf-8">
+    <title>정보입력</title>
+    <link rel="stylesheet" href="{% static 'css/register_detail.css' %}" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        @import url("{% static 'css/footer.css' %}");
+    </style>
+</head>
+{% endblock %}
+
+{% block content %}
+
+<div id="wrapper">
+    <div id="content">
+        <div class="inform_size">
+            <label id="inform_tit">회원정보 입력</label>
+        </div>
+        <form class="inform_form" method="POST">
+            <div class="inform_puts">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="이름" class="inform_put" /><br>
+                <input type="text" name="major" placeholder="학과" class="inform_put" /><br>
+                <input type="number" name="ad_year" placeholder="입학년도" class="inform_put" />
+            </div>
+            <p id="message" style="    display: inline-block;
+                padding: 0.7em 0.2em 0 0.1em;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                color : red;
+                font-family: 'GmarketSansMedium';
+            ">
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message.message }}
+                    {% endfor %}
+                    {% endif %}
+                </p><br>
+            <button type="submit" id="button_final">가입하기</button>
+        </form>
+    </div>
+</div>
+
+<footer class ="footer">
+    <hr id = "footer_hr">
+    <div class = "footer_text">
+        <ul class="footer_list">
+            <li ><a href="javascript:popout()">이용 방법</a></li>
+            <li>|</li>
+            <li><a href = "javascript:click()">문의 및 건의</li>
+        </ul>
+        <p class = "copy">© 2022 멋사강원대</p>
+    </div>
+</footer>
+
+<script>
+    
+    function click(){ alert('문의 및 건의는 calculator1234@gmail.com으로 연락주세요');}
+
+    function popout() {
+        var url = "{% url 'method' %}";
+        var name = "method"
+        var css = "width = 500, height = 600, top = 10, left = 10"
+        window.open(url,name,css )
+    }
+</script>
+{% endblock %}

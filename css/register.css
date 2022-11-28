@@ -1,0 +1,128 @@
+/**전체 설정**/
+@import "reset.css";
+/**완료 _ 전체 설정**/
+
+
+#signup_tit {
+    font-family: 'GmarketSansMedium';
+    font-weight: bolder;
+    font-size: 3rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+
+.signup_size::after {
+    content: '';
+    background-color: #1E51A2;
+    display: block;
+    height: 0.3em;
+    width: 155px;
+    margin: 8px auto;
+
+}
+
+.signup_form {
+    margin-top: 3em;
+}
+
+#signup_id {
+    border-radius: 1em;
+    border: 0.1rem solid #A8AABc;
+    width: 100%;
+    max-width: 17em;
+    height: 3.5em;
+    margin-top: 0.4em;
+    padding: 1em;
+}
+
+::placeholder {
+    font-family: 'GmarketSansMedium';
+}
+
+#button_cheack {
+    font-family: 'GmarketSansMedium';
+    background-color: #1E51A2;
+    color: white;
+    border: 0;
+    border-top-left-radius: 3.2%;
+    border-bottom-left-radius: 3.2%;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+    width: 70px;
+    height: 46px;
+}
+
+#button_cheack:hover {
+    cursor: pointer;
+    background-color: #113a7d;
+}
+
+
+#signup_alr_id {
+    font-family: 'GmarketSansMedium';
+    font-size: 0.8rem;
+    color: red;
+    margin-top: 0.7em;
+    visibility: hidden;
+    /**일단 가려놓음**/
+}
+
+#signup_alr_pss {
+    font-family: 'GmarketSansMedium';
+    font-size: 0.8rem;
+    color: red;
+    margin-top: 0.7em;
+    visibility: hidden;
+    /**일단 가려놓음**/
+}
+
+
+.signup_passs {
+    margin: 0.5em 0;
+}
+
+.signup_pass {
+    border-radius: 1em;
+    border: 0.1rem solid #A8AABc;
+    width: 100%;
+    max-width: 17em;
+    height: 3.5em;
+    margin: 0.4em 0;
+    padding: 1em;
+}
+
+
+
+#button_next{
+    margin-top: 1em;
+    font-family: 'GmarketSansMedium';
+    background-color : #1E51A2;
+    color: white;
+    border: 0;
+    border-radius: 3.2%;
+    width: 220px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+#button_next:hover {
+    cursor: pointer;
+    background-color: #113a7d;
+}
+
+
+#small {
+    padding: 0.7em 0.2em 0 0.1em;
+    font-size: 0.9rem;
+    color : #A8AABc;
+    font-family: 'GmarketSansMedium';
+}
+
+#message{
+    display: inline-block;
+    padding: 0.7em 0.2em 0 0.1em;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color : #A8AABc;
+    font-family: 'GmarketSansMedium';
+}

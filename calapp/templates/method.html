@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/method.css'%}" rel = "stylesheet">
+</head>
+<body>
+    <div class = wrapper> 
+        <h1 id ="tit">이용 방법</h1>
+        <h2 class = "sub_tit">1. 로그인하기</h2>
+            <h5 class = "int">회원가입을 하지 않은 경우,<br>
+            회원가입을 해주시기 바랍니다.</h5>
+            <img class="ima" src="{% static 'img/login.png'%}" alt="My Image" width="300" height="346">
+
+            <h2 class = "sub_tit">2. 과목 입력하기</h2>
+            <h5 class = "int">1) 현재까지 수강한 과목의<br>
+            과목분류, 과목명, 학점을 입력해 주세요.</h5>
+
+            <img class="ima" src="{% static 'img/index1.png'%}" alt="My Image" width="300" height="114">
+        
+
+            <h5 class = "int">2) 입력 칸에 정보를 기입한 후<br> 
+            추가 버튼을 누르면<br> 
+            해당 정보가 과목 창에 나타납니다.</h5>
+
+            <h6 class = "min_tit">* 표의 오른쪽 삭제 버튼을 누르면<br>
+            입력한 정보가 삭제됩니다.</h6>
+
+            <img class="ima" src="{% static 'img/index2.png'%}" alt="My Image" width="300" height="414">
+
+            
+            <h2 class = "sub_tit">3. 결과보기</h2>
+            <h5 class = "int">과목 입력 후 계산하기 버튼을 누르면<br>
+            졸업 여부와 상세 설명을 볼 수 있습니다.</h5>
+        
+            <h6 class = "min_tit">* 해당 결과는 각 대학의 사정에 따라
+            <br> 달라질 수 있습니다.</h6>
+
+            <img class="ima" src="{% static 'img/result.png'%}" alt="My Image" width="300" height="272">
+    </div>
+</body>
+</html>
